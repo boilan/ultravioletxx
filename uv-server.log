@@ -1,0 +1,18 @@
+Ultraviolet listening on http://localhost:3123
+BareError: The specified host could not be resolved.
+    at outgoingError (C:\Users\boilanv2\.config\freebuff-desktop\no-folder\threads\128aa9289a9f74f80aa354a9ea68ceb6fd272aa67a74d0b51b4c099af53829ed\ultraviolet\node_modules\.pnpm\@tomphttp+bare-server-node@2.0.6\node_modules\@tomphttp\bare-server-node\dist\requestUtil.js:28:24)
+    at ClientRequest.<anonymous> (C:\Users\boilanv2\.config\freebuff-desktop\no-folder\threads\128aa9289a9f74f80aa354a9ea68ceb6fd272aa67a74d0b51b4c099af53829ed\ultraviolet\node_modules\.pnpm\@tomphttp+bare-server-node@2.0.6\node_modules\@tomphttp\bare-server-node\dist\requestUtil.js:95:20)
+    at ClientRequest.emit (node:events:526:24)
+    at emitErrorEvent (node:_http_client:114:11)
+    at Socket.socketErrorListener (node:_http_client:766:5)
+    at Socket.emit (node:events:514:28)
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  status: 500,
+  body: {
+    code: 'HOST_NOT_FOUND',
+    id: 'request',
+    message: 'The specified host could not be resolved.'
+  }
+}
