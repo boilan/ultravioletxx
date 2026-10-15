@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<title>Ultraviolet | Sophisticated Web Proxy</title>
+		<meta
+			name="description"
+			content="Ultraviolet, a service worker based web proxy."
+		/>
+		<meta name="theme-color" content="#434c5e" />
+		<link rel="stylesheet" href="style.css" />
+
+		<script src="baremux/index.js"></script>
+		<script src="uv/uv.bundle.js"></script>
+		<script src="uv/uv.config.js"></script>
+	</head>
+
+	<body>
+		<main class="launcher">
+			<h1>Ultraviolet</h1>
+			<p class="desc">
+				Service worker proxy relayed through the local Bare server.
+			</p>
+
+			<form id="uv-form">
+				<input
+					id="uv-search-engine"
+					type="hidden"
+					value="https://www.google.com/search?q=%s"
+				/>
+				<input
+					id="uv-address"
+					type="text"
+					placeholder="Search the web freely"
+					autocomplete="off"
+					autofocus
+				/>
+				<button type="submit">Go</button>
+			</form>
+
+			<div id="uv-error-wrap" hidden>
+				<p id="uv-error"></p>
+				<pre id="uv-error-code"></pre>
+			</div>
+
+			<footer>
+				<span>Ultraviolet &copy; TitaniumNetwork</span>
+				<span>Relay: <code>/bare/</code></span>
+			</footer>
+		</main>
+
+		<iframe id="uv-frame" title="Proxied page"></iframe>
+
+		<script src="register-sw.js"></script>
+		<script src="search.js"></script>
+		<script src="index.js"></script>
+	</body>
+</html>
